@@ -12,25 +12,41 @@ map <leader>s :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '*.egg-info', 'node_modules']
 
 
-" Ale 
+" Ale
 let g:ale_linters = {
             \   'typescript': ['tsserver', 'eslint'],
             \   'javascript': ['eslint'],
             \   'python': ['pyls', 'pylint'],
-            \   'go': ['gopls', 'goimports', 'golint']
-}
+            \   'go': ['gopls', 'goimports', 'golint', 'gofmt']
+            \}
 
 let g:ale_fixers = {
+            \ '*': ['remove_trailing_lines', 'trim_whitespace'],
             \   'typescript': ['prettier'],
-            \   'javascript': ['eslint'],
             \   'python': ['yapf'],
-            \   'go': ['goimports']
-}
+            \   'go': ['goimports', 'gofmt']
+            \}
 
 let g:ale_fix_on_save = 1
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 nnoremap <silent> <leader>d :ALEGoToDefinition<cr>
 
+let g:ale_set_highlights = 0
+
+
+let g:ale_lint_on_enter = 1
+
 let g:ale_linters_explicit = 1
-let g:airline#extension#ale#enabled = 1
+
+
+let g:deoplete#enable_at_startup = 1
+
+call deoplete#custom#option('source', {
+            \ '_': ['ale']
+            \})
+
+
+" Git gutter
+
+let g:gitgutter_enabled=0
