@@ -32,7 +32,7 @@ let g:ale_fix_on_save = 1
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
 nnoremap <silent> <leader>d :ALEGoToDefinition<cr>
 
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 
 
 let g:ale_lint_on_enter = 1
