@@ -13,8 +13,9 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__', '*.egg-info', 'node_modules']
 
 
 " Ale
+
 let g:ale_linters = {
-            \   'typescript': ['tsserver', 'eslint'],
+            \   'typescript': ['tsserver', 'tslint', 'eslint'],
             \   'javascript': ['eslint'],
             \   'python': ['pyls', 'pylint'],
             \   'go': ['gopls', 'goimports', 'golint', 'gofmt']
@@ -22,11 +23,11 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-            \   'typescript': ['prettier'],
+            \   'typescript': ['tslint', 'eslint'],
             \   'python': ['yapf'],
             \   'go': ['goimports', 'gofmt']
             \}
-
+let g:ale_linter_aliases = {'typescriptreact': 'typescript'}
 let g:ale_fix_on_save = 1
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
@@ -50,3 +51,6 @@ call deoplete#custom#option('source', {
 " Git gutter
 
 let g:gitgutter_enabled=0
+
+" Turn old regex engine off
+set re=0
