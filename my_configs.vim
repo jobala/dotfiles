@@ -15,8 +15,8 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__', '*.egg-info', 'node_modules']
 " Ale
 
 let g:ale_linters = {
-            \   'typescript': ['tsserver', 'tslint', 'eslint'],
-            \   'typescriptreact': ['tslint', 'eslint'],
+            \   'typescript': ['tsserver', 'eslint'],
+            \   'typescriptreact': ['eslint'],
             \   'javascript': ['eslint'],
             \   'python': ['pyls', 'pylint'],
             \   'go': ['gopls', 'goimports', 'golint', 'gofmt']
@@ -24,8 +24,9 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-            \   'typescript': ['tslint', 'eslint'],
-            \   'typescriptreact': ['tslint', 'eslint'],
+            \   'typescript': ['eslint'],
+            \   'javascript': ['eslint'],
+            \   'typescriptreact': ['eslint'],
             \   'python': ['yapf'],
             \   'go': ['goimports', 'gofmt']
             \}
