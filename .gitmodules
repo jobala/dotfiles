@@ -19,3 +19,6 @@
 [submodule "pack/plugins/start/gruvbox"]
 	path = pack/plugins/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "pack/plugins/start/nvim-autopairs"]
+	path = pack/plugins/start/nvim-autopairs
+	url = git@github.com:windwp/nvim-autopairs.git
