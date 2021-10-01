@@ -3,7 +3,7 @@ inoremap jj <Esc>
 " colorscheme
 set background=dark
 set termguicolors
-" colorscheme gruvbox
+colorscheme gruvbox
 
 " nerdtree
 let g:NERDTreeWinPos = "right"

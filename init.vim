@@ -2,6 +2,8 @@ let g:python3_host_prog='/Library/Frameworks/Python.framework/Versions/3.9/bin/p
 
 
 lua << EOF
+require'nvim-autopairs'.setup{}
+
 require'lspconfig'.pyls.setup{
     on_attach=on_attach,
     settings = {
@@ -19,5 +21,5 @@ require'lspconfig'.pyls.setup{
 }
 EOF
 
-source ./basic.vim
-source ./config.vim
+source ~/.config/nvim/basic.vim
+source ~/.config/nvim/config.vim
