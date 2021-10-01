@@ -19,4 +19,5 @@ require'lspconfig'.pyls.setup{
 }
 EOF
 
-source ~/.vimrc
+source ./basic.vim
+source ./config.vim
