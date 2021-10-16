@@ -22,3 +22,6 @@
 [submodule "pack/plugins/start/nvim-autopairs"]
 	path = pack/plugins/start/nvim-autopairs
 	url = git@github.com:windwp/nvim-autopairs.git
+[submodule "pack/plugins/start/lightline.vim"]
+	path = pack/plugins/start/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
