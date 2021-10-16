@@ -23,3 +23,4 @@ EOF
 
 source ~/.config/nvim/basic.vim
 source ~/.config/nvim/config.vim
+
