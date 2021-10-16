@@ -6,21 +6,7 @@ require'nvim-autopairs'.setup{}
 
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.html.setup{}
-require'lspconfig'.pylsp.setup{
-    on_attach=on_attach,
-    settings = {
-        pylsp = {
-            plugins = {
-                pylint = {
-                    enabled = true
-                },
-                pycodestyle = {
-                    enabled = false
-                }
-            }
-        }
-    }
-}
+require'lspconfig'.pylsp.setup{}
 EOF
 
 source ~/.config/nvim/basic.vim
