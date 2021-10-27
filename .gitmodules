@@ -4,9 +4,6 @@
 [submodule "pack/plugins/start/nerdtree"]
 	path = pack/plugins/start/nerdtree
 	url = https://github.com/preservim/nerdtree
-[submodule "pack/plugins/start/nvim-compe"]
-	path = pack/plugins/start/nvim-compe
-	url = https://github.com/hrsh7th/nvim-compe
 [submodule "pack/plugins/start/nvim-lspconfig"]
 	path = pack/plugins/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
@@ -28,3 +25,21 @@
 [submodule "pack/plugins/start/vim-javascript"]
 	path = pack/plugins/start/vim-javascript
 	url = git@github.com:pangloss/vim-javascript.git
+[submodule "pack/plugins/start/nvim-cmp"]
+	path = pack/plugins/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "pack/plugins/start/cmp-nvim-lsp"]
+	path = pack/plugins/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp
+[submodule "pack/plugins/start/cmp-buffer"]
+	path = pack/plugins/start/cmp-buffer
+	url = git@github.com:hrsh7th/cmp-buffer
+[submodule "pack/plugins/start/cmp-path"]
+	path = pack/plugins/start/cmp-path
+	url = git@github.com:hrsh7th/cmp-path
+[submodule "pack/plugins/start/lsp_signature.nvim"]
+	path = pack/plugins/start/lsp_signature.nvim
+	url = git@github.com:ray-x/lsp_signature.nvim.git
+[submodule "pack/plugins/start/nord-vim"]
+	path = pack/plugins/start/nord-vim
+	url = git@github.com:arcticicestudio/nord-vim.git
