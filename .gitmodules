@@ -43,3 +43,21 @@
 [submodule "pack/plugins/start/nord-vim"]
 	path = pack/plugins/start/nord-vim
 	url = git@github.com:arcticicestudio/nord-vim.git
+[submodule "pack/plugins/start/vim-devicons"]
+	path = pack/plugins/start/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "pack/plugins/start/nvim-treesitter"]
+	path = pack/plugins/start/nvim-treesitter
+	url = git@github.com:nvim-treesitter/nvim-treesitter.git
+[submodule "pack/plugins/start/vim-jsx-typescript"]
+	path = pack/plugins/start/vim-jsx-typescript
+	url = git@github.com:peitalin/vim-jsx-typescript.git
+[submodule "pack/plugins/start/typescript-vim"]
+	path = pack/plugins/start/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "pack/plugins/start/cmp-vsnip"]
+	path = pack/plugins/start/cmp-vsnip
+	url = git@github.com:hrsh7th/cmp-vsnip.git
+[submodule "pack/plugins/start/vim-vsnip"]
+	path = pack/plugins/start/vim-vsnip
+	url = git@github.com:hrsh7th/vim-vsnip.git
