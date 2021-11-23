@@ -6,6 +6,7 @@ source ~/.config/nvim/config.vim
 
 packadd! cmp-vsnip
 packadd! vim-vsnip
+packadd! nerdtree
 
 lua << EOF
 

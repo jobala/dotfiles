@@ -2,7 +2,7 @@
 	path = /Users/jobala/.config/nvim/pack/plugins/start/gruvbox
 	url = https://github.com/morhetz/gruvbox
 [submodule "pack/plugins/start/nerdtree"]
-	path = pack/plugins/start/nerdtree
+	path = pack/plugins/opt/nerdtree
 	url = https://github.com/preservim/nerdtree
 [submodule "pack/plugins/start/nvim-lspconfig"]
 	path = pack/plugins/start/nvim-lspconfig
