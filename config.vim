@@ -3,7 +3,9 @@ inoremap jj <Esc>
 " colorscheme
 set background=dark
 set termguicolors
-colorscheme nord
+let ayucolor="dark"
+colorscheme ayu
+
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
@@ -42,7 +44,7 @@ autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
