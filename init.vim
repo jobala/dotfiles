@@ -16,6 +16,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'nvim-autopairs'.setup{}
 require'lsp_signature'.setup{}
 
+require'lspconfig'.racket_langserver.setup{capabilities = capabilities}
 require'lspconfig'.eslint.setup{ capabilities = capabilities }
 require'lspconfig'.gopls.setup{ capabilities = capabilities }
 require'lspconfig'.tsserver.setup{ capabilities = capabilities }

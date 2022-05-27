@@ -40,9 +40,6 @@
 [submodule "pack/plugins/start/lsp_signature.nvim"]
 	path = pack/plugins/start/lsp_signature.nvim
 	url = git@github.com:ray-x/lsp_signature.nvim.git
-[submodule "pack/plugins/start/nord-vim"]
-	path = pack/plugins/opt/nord-vim
-	url = git@github.com:arcticicestudio/nord-vim.git
 [submodule "pack/plugins/start/vim-devicons"]
 	path = pack/plugins/start/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
@@ -70,3 +67,9 @@
 [submodule "pack/plugins/start/ayu-vim"]
 	path = pack/plugins/start/ayu-vim
 	url = git@github.com:ayu-theme/ayu-vim.git
+[submodule "pack/plugins/start/vim-monochrome"]
+	path = pack/plugins/start/vim-monochrome
+	url = git@github.com:fxn/vim-monochrome.git
+[submodule "pack/plugins/start/vim-css-color"]
+	path = pack/plugins/start/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
