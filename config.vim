@@ -3,11 +3,15 @@ inoremap jj <Esc>
 " colorscheme
 set background=dark
 set termguicolors
-let ayucolor="dark"
 
 " colorscheme
-let g:monochrome_italic_comments = 1
-colorscheme monochrome
+let ayucolor = "dark"
+colorscheme ayu
+
+let g:indentLine_char = ''
+let g:indentLine_first_char = ''
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
 
 " fold
 set foldmethod=indent
@@ -51,6 +55,7 @@ autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
