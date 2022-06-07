@@ -4,81 +4,15 @@
 [submodule "pack/plugins/start/nerdtree"]
 	path = pack/plugins/opt/nerdtree
 	url = https://github.com/preservim/nerdtree
-[submodule "pack/plugins/start/nvim-lspconfig"]
-	path = pack/plugins/start/nvim-lspconfig
-	url = https://github.com/neovim/nvim-lspconfig
-[submodule "pack/plugins/start/vim-fugitive"]
-	path = pack/plugins/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "pack/plugins/start/vim-surround"]
-	path = pack/plugins/start/vim-surround
-	url = git@github.com:tpope/vim-surround.git
 [submodule "pack/plugins/start/gruvbox"]
 	path = pack/plugins/opt/gruvbox
 	url = https://github.com/morhetz/gruvbox
-[submodule "pack/plugins/start/nvim-autopairs"]
-	path = pack/plugins/start/nvim-autopairs
-	url = git@github.com:windwp/nvim-autopairs.git
-[submodule "pack/plugins/start/lightline.vim"]
-	path = pack/plugins/start/lightline.vim
-	url = git@github.com:itchyny/lightline.vim.git
-[submodule "pack/plugins/start/vim-javascript"]
-	path = pack/plugins/start/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule "pack/plugins/start/nvim-cmp"]
-	path = pack/plugins/start/nvim-cmp
-	url = git@github.com:hrsh7th/nvim-cmp.git
-[submodule "pack/plugins/start/cmp-nvim-lsp"]
-	path = pack/plugins/start/cmp-nvim-lsp
-	url = git@github.com:hrsh7th/cmp-nvim-lsp
-[submodule "pack/plugins/start/cmp-buffer"]
-	path = pack/plugins/start/cmp-buffer
-	url = git@github.com:hrsh7th/cmp-buffer
-[submodule "pack/plugins/start/cmp-path"]
-	path = pack/plugins/start/cmp-path
-	url = git@github.com:hrsh7th/cmp-path
-[submodule "pack/plugins/start/lsp_signature.nvim"]
-	path = pack/plugins/start/lsp_signature.nvim
-	url = git@github.com:ray-x/lsp_signature.nvim.git
 [submodule "pack/plugins/start/vim-devicons"]
 	path = pack/plugins/start/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
-[submodule "pack/plugins/start/nvim-treesitter"]
-	path = pack/plugins/start/nvim-treesitter
-	url = git@github.com:nvim-treesitter/nvim-treesitter.git
-[submodule "pack/plugins/start/vim-jsx-typescript"]
-	path = pack/plugins/start/vim-jsx-typescript
-	url = git@github.com:peitalin/vim-jsx-typescript.git
-[submodule "pack/plugins/start/typescript-vim"]
-	path = pack/plugins/start/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
 [submodule "pack/plugins/start/cmp-vsnip"]
 	path = pack/plugins/opt/cmp-vsnip
 	url = git@github.com:hrsh7th/cmp-vsnip.git
 [submodule "pack/plugins/start/vim-vsnip"]
 	path = pack/plugins/opt/vim-vsnip
 	url = git@github.com:hrsh7th/vim-vsnip.git
-[submodule "pack/plugins/start/vim-github-dark"]
-	path = pack/plugins/start/vim-github-dark
-	url = git@github.com:vv9k/vim-github-dark.git
-[submodule "pack/plugins/start/github-nvim-theme"]
-	path = pack/plugins/start/github-nvim-theme
-	url = git@github.com:projekt0n/github-nvim-theme.git
-[submodule "pack/plugins/start/ayu-vim"]
-	path = pack/plugins/start/ayu-vim
-	url = git@github.com:ayu-theme/ayu-vim.git
-[submodule "pack/plugins/start/vim-monochrome"]
-	path = pack/plugins/start/vim-monochrome
-	url = git@github.com:fxn/vim-monochrome.git
-[submodule "pack/plugins/start/vim-css-color"]
-	path = pack/plugins/start/vim-css-color
-	url = https://github.com/ap/vim-css-color.git
-[submodule "pack/plugins/start/lightline-gruvbox.vim"]
-	path = pack/plugins/start/lightline-gruvbox.vim
-	url = git@github.com:oldwomanjosiah/lightline-gruvbox.vim.git
-[submodule "pack/plugins/start/vim-colors-xcode"]
-	path = pack/plugins/start/vim-colors-xcode
-	url = git@github.com:arzg/vim-colors-xcode.git
-[submodule "pack/plugins/start/vim-racket"]
-	path = pack/plugins/start/vim-racket
-	url = https://github.com/wlangstroth/vim-racket.git
