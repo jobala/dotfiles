@@ -41,4 +41,7 @@ Plug 'leafgarland/typescript-vim'
 " Show function/method signature when typing
 Plug 'ray-x/lsp_signature.nvim'
 
+" Tree sitter
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
+
 call plug#end()

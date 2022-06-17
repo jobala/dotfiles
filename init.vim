@@ -26,6 +26,11 @@ require'lspconfig'.csharp_ls.setup{ capabilities = capabilities }
 require'lspconfig'.ocamllsp.setup{ capabilities = capabilities,
     filetypes = { "ml" }
 }
+
+require'nvim-treesitter.configs'.setup{
+        ensure_installed = {"javascript", "typescript", "go"},
+        highlight = { enable = true },
+}
 EOF
 
 

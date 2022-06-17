@@ -1,5 +1,3 @@
-inoremap jj <Esc>
-
 " colorscheme
 set background=dark
 set termguicolors
@@ -13,45 +11,16 @@ let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 
-" fold
-set foldmethod=indent
-set nofoldenable
-set foldlevel=2
-
 " nerdtree
 let g:NERDTreeWinPos = "right"
 map <leader>s :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '*.egg-info', 'node_modules']
 
-" LSP config (the mappings used in the default file don't quite work right)
-nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> E <cmd>lua vim.diagnostic.open_float()<CR>
-nnoremap <silent> <C-m> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
-nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-" set filetypes as typescript react
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-
-" auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 100)
-
-
-" set js/ts/typescriptreact tab size to 2
-autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
-autocmd Filetype typescriptreact setlocal ts=2 sw=2 sts=0 expandtab
-autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
-
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => fugitive
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>g :G<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -118,14 +87,14 @@ EOF
 """"""""""
 " Go
 """"""""""
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-let g:go_auto_sameids = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_highlight_extra_types = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_types = 1
+" let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
+" let g:go_auto_type_info = 1

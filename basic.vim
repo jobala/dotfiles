@@ -18,13 +18,25 @@ let mapleader=","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Fast escape
+inoremap jj <Esc>
 set number
 
 " :W sudo saves the file
 "  (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+" fold
+set foldmethod=indent
+set nofoldenable
+set foldlevel=2
 
+" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
+map <space> /
+map <C-space> ?
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Text, tab and indent related
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,14 +62,6 @@ set wrap "Wrap lines
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " Moving around, tabs, windows and buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-
-map <space> /
-map <C-space> ?
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -101,3 +105,32 @@ endtry
 
 " Return to last edit position when opening files.
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" LSP config (the mappings used in the default file don't quite work right)
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> E <cmd>lua vim.diagnostic.open_float()<CR>
+nnoremap <silent> <C-m> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" set filetypes as typescript react
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
+" auto-format
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 100)
+
+
+" set js/ts/typescriptreact tab size to 2
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype typescriptreact setlocal ts=2 sw=2 sts=0 expandtab
+autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
+
+
