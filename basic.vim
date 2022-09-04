@@ -20,7 +20,6 @@ nmap <leader>w :w!<cr>
 
 " Fast escape
 inoremap jj <Esc>
-set number
 
 " :W sudo saves the file
 "  (useful for handling the permission-denied error)

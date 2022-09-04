@@ -14,8 +14,12 @@ Plug 'hrsh7th/cmp-path'
 " Autocompletion engine 
 Plug 'hrsh7th/nvim-cmp'
 
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 " Theme
 Plug 'ayu-theme/ayu-vim'
+Plug 'savq/melange'
 
 " NERDTree with on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
@@ -44,4 +48,10 @@ Plug 'ray-x/lsp_signature.nvim'
 " Tree sitter
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate'}
 
+" fzf
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+
+" Writing
+Plug 'junegunn/goyo.vim'
 call plug#end()

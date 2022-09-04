@@ -23,6 +23,8 @@ require'lspconfig'.tsserver.setup{ capabilities = capabilities }
 require'lspconfig'.html.setup{ capabilities = capabilities }
 require'lspconfig'.pylsp.setup{ capabilities = capabilities }
 require'lspconfig'.csharp_ls.setup{ capabilities = capabilities }
+require'lspconfig'.hls.setup{ capabilities = capabilities }
+require'lspconfig'.solargraph.setup{ capabilities = capabilities }
 require'lspconfig'.ocamllsp.setup{ capabilities = capabilities,
     filetypes = { "ml" }
 }
