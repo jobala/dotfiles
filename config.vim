@@ -3,9 +3,22 @@ set background=dark
 set termguicolors
 
 " colorscheme
-let ayucolor = "dark"
-colorscheme melange
+if has('termguicolors')
+  set termguicolors
+endif
 
+" For light version.
+set background=light
+
+" Set contrast.
+" This configuration option should be placed before `colorscheme everforest`.
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:everforest_background = 'medium'
+
+" For better performance
+let g:everforest_better_performance = 1
+
+colorscheme everforest
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
@@ -13,9 +26,9 @@ let g:indentLine_setColors = 0
 
 " nerdtree
 let g:NERDTreeWinPos = "right"
-map <leader>s :NERDTreeToggle<cr>
+map <leader>s :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', '*.egg-info', 'node_modules']
-
+let g:NERDTreeMinimalMenu=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fugitive
@@ -26,6 +39,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
+      \ 'colorscheme' : 'everforest',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -51,7 +65,7 @@ let g:lightline = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set completeopt=menu,menuone,noselect
 
-lua <<EOF
+lua << EOF
   -- Setup nvim-cmp.
   local cmp = require'cmp'
 
@@ -129,3 +143,10 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yml silent! PrettierAsync
+
+
+

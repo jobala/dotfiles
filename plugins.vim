@@ -20,6 +20,9 @@ Plug 'hrsh7th/vim-vsnip'
 " Theme
 Plug 'ayu-theme/ayu-vim'
 Plug 'savq/melange'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/everforest'
 
 " NERDTree with on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
@@ -54,4 +57,14 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Writing
 Plug 'junegunn/goyo.vim'
+
+"Haskell Formatting
+Plug 'sdiehl/vim-ormolu'
+
+" Prettier
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
+
 call plug#end()

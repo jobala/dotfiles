@@ -2,6 +2,9 @@
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
+" Show line number
+set number
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -120,10 +123,10 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.js lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
 
 
 " set js/ts/typescriptreact tab size to 2
@@ -132,4 +135,5 @@ autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype typescriptreact setlocal ts=2 sw=2 sts=0 expandtab
 autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
 
-
+" Haskell formatting
+let g:ormolu_suppress_stderr=1
