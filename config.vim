@@ -1,24 +1,13 @@
 " colorscheme
-set background=dark
-set termguicolors
+set background=light
 
-" colorscheme
 if has('termguicolors')
   set termguicolors
 endif
 
-" For light version.
-set background=light
+g:one_allow_italics=1
+colorscheme one
 
-" Set contrast.
-" This configuration option should be placed before `colorscheme everforest`.
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:everforest_background = 'medium'
-
-" For better performance
-let g:everforest_better_performance = 1
-
-colorscheme everforest
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
 let g:indentLine_showFirstIndentLevel = 1
@@ -39,7 +28,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme' : 'everforest',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -146,7 +135,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yml silent! PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue silent! PrettierAsync
 
 
 

@@ -24,9 +24,10 @@ packadd! cmp-vsnip
 packadd! vim-vsnip
 packadd! nerdtree
 
-lua << EOF
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+lua << EOF
+ 
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'nvim-autopairs'.setup{}
@@ -49,7 +50,4 @@ require'nvim-treesitter.configs'.setup{
         highlight = { enable = true },
 }
 EOF
-
-
-
 
