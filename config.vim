@@ -5,8 +5,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-g:one_allow_italics=1
-colorscheme one
+colorscheme onehalflight
 
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
@@ -28,7 +27,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'onehalfdark',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],

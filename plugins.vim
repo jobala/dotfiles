@@ -19,6 +19,8 @@ Plug 'hrsh7th/vim-vsnip'
 
 " Theme
 Plug 'rakr/vim-one'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
 
 " NERDTree with on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
