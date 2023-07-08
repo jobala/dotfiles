@@ -1,11 +1,11 @@
 " colorscheme
 set background=light
 
-if has('termguicolors')
-  set termguicolors
-endif
-
+set number
 colorscheme onehalflight
+set cursorline
+let g:onelight_italic_comment = v:false
+
 
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
@@ -134,7 +134,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue silent! PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue silent! PrettierAsync
 
 
 

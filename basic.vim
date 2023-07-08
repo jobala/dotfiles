@@ -130,7 +130,6 @@ autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype typescriptreact setlocal ts=2 sw=2 sts=0 expandtab
-autocmd BufWritePre <buffer> <cmd>EslintFixAll<CR>
 
 " Haskell formatting
 let g:ormolu_suppress_stderr=1

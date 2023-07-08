@@ -20,6 +20,7 @@ Plug 'hrsh7th/vim-vsnip'
 " Theme
 Plug 'rakr/vim-one'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'jobala/madonna'
 
 
 " NERDTree with on-demand loading
