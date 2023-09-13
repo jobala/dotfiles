@@ -121,7 +121,9 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 " auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.ts lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.format(nil, 100)
+autocmd BufWritePre *.tsx lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.format(nil, 100)
 autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
 

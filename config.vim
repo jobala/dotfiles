@@ -1,6 +1,5 @@
 " colorscheme
 set background=light
-
 set number
 colorscheme onehalflight
 set cursorline
@@ -27,7 +26,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'onehalfdark',
+      \ 'colorscheme': 'onehalflight',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -134,7 +133,10 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Prettier
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue silent! PrettierAsync
+
+" Dart
+let g:dart_style_guide=2
+let g:dart_format_on_save= v:true
 
 
 

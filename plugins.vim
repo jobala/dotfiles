@@ -21,6 +21,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'rakr/vim-one'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'jobala/madonna'
+Plug 'morhetz/gruvbox'
 
 
 " NERDTree with on-demand loading
@@ -61,11 +62,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'sdiehl/vim-ormolu'
 
 " Prettier
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'branch': 'release/0.x'
-  \ }
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'MunifTanjim/prettier.nvim'
 
-Plug 'earthly/earthly.vim', { 'branch': 'main' }
+Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
