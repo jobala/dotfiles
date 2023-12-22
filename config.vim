@@ -5,6 +5,7 @@ colorscheme onehalflight
 set cursorline
 let g:onelight_italic_comment = v:false
 
+set showtabline=0
 
 let g:indentLine_char = ''
 let g:indentLine_first_char = ''
@@ -26,7 +27,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'onehalflight',
+      \ 'colorscheme': 'onehalfdark',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
