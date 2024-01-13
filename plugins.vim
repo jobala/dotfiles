@@ -22,6 +22,7 @@ Plug 'rakr/vim-one'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'jobala/madonna'
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 
 " NERDTree with on-demand loading

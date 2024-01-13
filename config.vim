@@ -1,7 +1,6 @@
 " colorscheme
-set background=light
-set number
-colorscheme onehalflight
+set background=dark
+colorscheme catppuccin-mocha
 set cursorline
 let g:onelight_italic_comment = v:false
 
@@ -27,7 +26,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'onehalfdark',
+      \ 'colorscheme': 'catppuccin',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],

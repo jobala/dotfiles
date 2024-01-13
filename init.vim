@@ -46,10 +46,18 @@ require'lspconfig'.ocamllsp.setup{ capabilities = capabilities,
 }
 
 require'nvim-treesitter.configs'.setup{
-        ensure_installed = {"javascript", "typescript", "go"},
+        ensure_installed = {
+            "javascript",
+            "typescript",
+            "go",
+            "json",
+            "html",
+            "dart",
+            "haskell",
+            "python"
+            },
         highlight = { enable = true },
 }
-
 
 local null_ls = require("null-ls")
 
@@ -103,5 +111,6 @@ prettier.setup({
     "yaml",
   },
 })
+
 EOF
 
