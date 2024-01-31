@@ -1,7 +1,7 @@
 " colorscheme
 set background=light
-colorscheme catppuccin-latte
-set cursorline
+colorscheme fogbell_light
+" set cursorline
 let g:onelight_italic_comment = v:false
 
 set showtabline=0

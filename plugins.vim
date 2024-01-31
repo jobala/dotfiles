@@ -23,6 +23,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'jobala/madonna'
 Plug 'morhetz/gruvbox'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'jaredgorski/fogbell.vim'
 
 
 " Indent lines
