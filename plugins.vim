@@ -25,6 +25,9 @@ Plug 'morhetz/gruvbox'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 
+" Indent lines
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " NERDTree with on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
 

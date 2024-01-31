@@ -30,6 +30,9 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'nvim-autopairs'.setup{}
 require'lsp_signature'.setup{}
+require'ibl'.setup{
+    scope = { enabled = false }
+}
 
 require'lspconfig'.dartls.setup{ capabilities = capabilities }
 require'lspconfig'.eslint.setup{ capabilities = capabilities }

@@ -1,6 +1,6 @@
 " colorscheme
-set background=dark
-colorscheme catppuccin-mocha
+set background=light
+colorscheme catppuccin-latte
 set cursorline
 let g:onelight_italic_comment = v:false
 
@@ -138,3 +138,13 @@ let g:prettier#autoformat = 0
 let g:dart_style_guide=2
 let g:dart_format_on_save= v:true
 
+lua << EOF
+require("catppuccin").setup({
+integrations = {
+        mini = {
+            enabled = true,
+            indentscope_color = "",
+        },
+}
+})
+EOF
