@@ -1,6 +1,6 @@
 " colorscheme
-set background=light
-colorscheme fogbell_light
+set background=dark
+colorscheme catppuccin-mocha 
 " set cursorline
 let g:onelight_italic_comment = v:false
 
