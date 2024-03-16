@@ -72,4 +72,5 @@ Plug 'MunifTanjim/prettier.nvim'
 
 Plug 'dart-lang/dart-vim-plugin'
 
+Plug 'akinsho/toggleterm.nvim'
 call plug#end()

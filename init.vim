@@ -28,8 +28,8 @@ lua << EOF
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'nvim-autopairs'.setup{}
 require'lsp_signature'.setup{}
+require'toggleterm'.setup{}
 require'lspconfig'.dartls.setup{ capabilities = capabilities }
 require'lspconfig'.eslint.setup{ capabilities = capabilities }
 require'lspconfig'.racket_langserver.setup{ capabilities = capabilities }
@@ -111,5 +111,9 @@ prettier.setup({
   },
 })
 
+require'nvim-autopairs'.setup{
+    size = vim.o.columns * 0.5,
+    shell = vim.o.shell
+}
 EOF
 
