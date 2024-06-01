@@ -16,7 +16,7 @@ set autoread
 let mapleader=","
 
 " Fast saving
-nmap <leader>w :w!<cr>
+noremap <leader>w :w!<cr>
 
 " Fast escape
 inoremap jj <Esc>
@@ -31,8 +31,8 @@ set nofoldenable
 set foldlevel=2
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <C-space> ?
+noremap <space> /
+noremap <C-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
