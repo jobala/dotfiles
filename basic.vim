@@ -24,6 +24,7 @@ inoremap jj <Esc>
 " :W sudo saves the file
 "  (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+:vnoremap <leader>" `><esc>a"<esc>`<<esc>i"<esc>lel
 
 " fold
 set foldmethod=indent
@@ -119,14 +120,15 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 " set filetypes as typescript react
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
+augroup format
+    autocmd BufWritePre *.js lua vim.lsp.buf.format(nil, 100)
+    autocmd BufWritePre *.ts lua vim.lsp.buf.format(nil, 100)
+    autocmd BufWritePre *.jsx lua vim.lsp.buf.format(nil, 100)
+    autocmd BufWritePre *.tsx lua vim.lsp.buf.format(nil, 100)
+    autocmd BufWritePre *.py lua vim.lsp.buf.format(nil, 100)
+    autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
+augroup END
 " auto-format
-autocmd BufWritePre *.js lua vim.lsp.buf.format(nil, 100)
-autocmd BufWritePre *.ts lua vim.lsp.buf.format(nil, 100)
-autocmd BufWritePre *.jsx lua vim.lsp.buf.format(nil, 100)
-autocmd BufWritePre *.tsx lua vim.lsp.buf.format(nil, 100)
-autocmd BufWritePre *.py lua vim.lsp.buf.format(nil, 100)
-autocmd BufWritePre *.go lua vim.lsp.buf.format(nil, 100)
-
 
 " set js/ts/typescriptreact tab size to 2
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab

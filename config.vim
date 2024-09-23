@@ -1,6 +1,9 @@
+let g:edge_style = 'aura'
+let g:edge_better_performance = 1
+
 " colorscheme
 set background=dark
-colorscheme catppuccin-mocha
+"colorscheme edge 
 
 " set cursorline
 let g:onelight_italic_comment = v:false
@@ -27,7 +30,7 @@ map <leader>g :G<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'catppuccin',
+      \ 'colorscheme': 'edge',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],

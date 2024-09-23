@@ -24,6 +24,8 @@ Plug 'jobala/madonna'
 Plug 'morhetz/gruvbox'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'jaredgorski/fogbell.vim'
+Plug 'rose-pine/neovim'
+Plug 'sainnhe/edge'
 
 
 " Indent lines

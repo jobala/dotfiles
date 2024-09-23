@@ -33,6 +33,7 @@ require'toggleterm'.setup{}
 require'lspconfig'.dartls.setup{ capabilities = capabilities }
 require'lspconfig'.eslint.setup{ capabilities = capabilities }
 require'lspconfig'.racket_langserver.setup{ capabilities = capabilities }
+require'lspconfig'.lua_ls.setup{ capabilities = capabilities}
 require'lspconfig'.gopls.setup{ capabilities = capabilities }
 require'lspconfig'.tsserver.setup{ capabilities = capabilities }
 require'lspconfig'.html.setup{ capabilities = capabilities }
@@ -43,9 +44,13 @@ require'lspconfig'.solargraph.setup{ capabilities = capabilities }
 require'lspconfig'.ocamllsp.setup{ capabilities = capabilities,
     filetypes = { "ml" }
 }
+require'lspconfig'.clangd.setup{capabilities = capabilities}
+require'lspconfig'.rust_analyzer.setup{}
+
 
 require'nvim-treesitter.configs'.setup{
         ensure_installed = {
+            "c",
             "javascript",
             "typescript",
             "go",
@@ -53,7 +58,8 @@ require'nvim-treesitter.configs'.setup{
             "html",
             "dart",
             "haskell",
-            "python"
+            "python",
+            "rust"
             },
         highlight = { enable = true },
 }
