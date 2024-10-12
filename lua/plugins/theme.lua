@@ -1,7 +1,8 @@
 return {
-  "sainnhe/edge",
+	"sainnhe/edge",
 
-  config = function()
-    vim.cmd.colorscheme("edge")
-  end,
+	config = function()
+		edge_style = "aura"
+		vim.cmd.colorscheme("edge")
+	end,
 }

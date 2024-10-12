@@ -1,9 +1,7 @@
 return {
 	{
 		"L3MON4D3/LuaSnip",
-		-- follow latest release.
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 	},
 	{
@@ -17,7 +15,6 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 		},
 		config = function()
-			-- Set up nvim-cmp.
 			local cmp = require("cmp")
 
 			cmp.setup({
