@@ -3,7 +3,7 @@ let g:edge_better_performance = 1
 
 " colorscheme
 set background=dark
-"colorscheme edge 
+colorscheme edge 
 
 " set cursorline
 let g:onelight_italic_comment = v:false

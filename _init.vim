@@ -1,7 +1,7 @@
 let g:python3_host_prog='/Library/Frameworks/Python.framework/Versions/3.9/bin/python3'
 
 source ~/.config/nvim/basic.vim
-source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/manifest.vim
 source ~/.config/nvim/config.vim
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -33,7 +33,38 @@ require'toggleterm'.setup{}
 require'lspconfig'.dartls.setup{ capabilities = capabilities }
 require'lspconfig'.eslint.setup{ capabilities = capabilities }
 require'lspconfig'.racket_langserver.setup{ capabilities = capabilities }
-require'lspconfig'.lua_ls.setup{ capabilities = capabilities}
+require'lspconfig'.lua_ls.setup{
+    capabilities = capabilities,
+    settings={ Lua ={ diagnostics = { globals = { 'vim'}}}}, 
+    on_init = function(client)
+        if client.workspace_folders then
+          local path = client.workspace_folders[1].name
+          if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+            return
+          end
+        end
+
+        client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+          runtime = {
+            -- Tell the language server which version of Lua you're using
+            -- (most likely LuaJIT in the case of Neovim)
+            version = 'LuaJIT'
+          },
+          -- Make the server aware of Neovim runtime files
+          workspace = {
+            checkThirdParty = false,
+            library = {
+              vim.env.VIMRUNTIME
+              -- Depending on the usage, you might want to add additional paths here.
+              -- "${3rd}/luv/library"
+              -- "${3rd}/busted/library",
+            }
+            -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
+            -- library = vim.api.nvim_get_runtime_file("", true)
+          }
+        })
+      end
+}
 require'lspconfig'.gopls.setup{ capabilities = capabilities }
 require'lspconfig'.tsserver.setup{ capabilities = capabilities }
 require'lspconfig'.html.setup{ capabilities = capabilities }
