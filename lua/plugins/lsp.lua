@@ -7,19 +7,17 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_insalled = {
-					"lua_ls",
-					"gopls",
-					"clangd",
-					"pylsp",
-					"goimports",
-					"prettier",
-					"typescript-language-server",
-				},
-			})
-		end,
+		opts = {
+			ensure_insalled = {
+				"lua_ls",
+				"gopls",
+				"clangd",
+				"pylsp",
+				"goimports",
+				"prettier",
+				"typescript-language-server",
+			},
+		},
 	},
 	{
 		"https://github.com/neovim/nvim-lspconfig",
@@ -38,9 +36,14 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.gopls.setup({ capabilities = capabilities })
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
+
 			lspconfig.ts_ls.setup({ capabilities = capabilities })
-			lspconfig.clangd.setup({ capabilities = capabilities })
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

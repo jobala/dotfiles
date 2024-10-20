@@ -9,9 +9,6 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    nmap("<leader>s", ":Neotree toggle<cr>")
-    nmap("<leader>g", ":Neotree git_status float<cr>")
-
     require("neo-tree").setup({
       window = {
         position = "right",
@@ -29,5 +26,8 @@ return {
         },
       },
     })
+
+    nmap("<leader>s", ":Neotree toggle<cr>")
+    nmap("<leader>g", ":Neotree float git_status<cr>")
   end,
 }

@@ -16,7 +16,7 @@ nmap("<leader>cr", ":noh<cr>")
 
 vim.opt.expandtab = true -- use spaces instead of tab
 vim.opt.smarttab = true
-vim.opt.shiftwidth = 4 -- 1 tab == 4 spaces
+vim.opt.shiftwidth = 4   -- 1 tab == 4 spaces
 vim.opt.tabstop = 4
 vim.opt.lbr = true
 vim.opt.tw = 500
@@ -40,4 +40,5 @@ vim.cmd([[
 
     " Return to last edit position when opening files.
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+    set diffopt+=iwhiteall
 ]])
