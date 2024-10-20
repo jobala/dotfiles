@@ -28,6 +28,5 @@ return {
     })
 
     nmap("<leader>s", ":Neotree toggle<cr>")
-    nmap("<leader>g", ":Neotree float git_status<cr>")
   end,
 }
