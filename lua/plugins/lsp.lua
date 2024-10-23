@@ -7,27 +7,29 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig",
-		opts = {
-			ensure_insalled = {
-				"lua_ls",
-				"gopls",
-				"clangd",
-				"pylsp",
-				"goimports",
-				"prettier",
-				"typescript-language-server",
-			},
-		},
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_insalled = {
+					"lua_ls",
+					"gopls",
+					"clangd",
+					"pylsp",
+					"goimports",
+					"prettier",
+					"typescript-language-server",
+				},
+			})
+		end,
 	},
 	{
 		"https://github.com/neovim/nvim-lspconfig",
 		config = function()
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<silent>gD", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "<silent>gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "<silent>gi", vim.lsp.buf.implementation, {})
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
+			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<silient> <C-m>", vim.lsp.buf.signature_help, {})
+			vim.keymap.set("n", "<C-m>", vim.lsp.buf.signature_help, {})
 			vim.keymap.set("n", "E", vim.diagnostic.open_float, {})
 
 			local lspconfig = require("lspconfig")
