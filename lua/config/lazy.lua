@@ -20,4 +20,10 @@ require("lazy").setup({
 		{ import = "plugins" },
 		-- { import = "lazyvim.plugins.extras.lang.typescript" },
 	},
+	install = {
+		colorscheme = { "edge" },
+	},
+	change_detection = {
+		notify = false,
+	},
 })

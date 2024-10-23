@@ -1,7 +1,5 @@
 require("util")
 
--- vim.cmd.colorscheme 'edge'
-
 vim.g.mapleader = ","
 
 -- fast writing & saving

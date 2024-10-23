@@ -1,9 +1,9 @@
 require("util")
 
 return {
-  "tpope/vim-fugitive",
+	"tpope/vim-fugitive",
 
-  config = function()
-    nmap("<leader>g", ":G<cr>")
-  end,
+	config = function()
+		nmap("<leader>g", ":G<cr>")
+	end,
 }
