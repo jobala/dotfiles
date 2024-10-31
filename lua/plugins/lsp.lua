@@ -24,13 +24,13 @@ return {
 	{
 		"https://github.com/neovim/nvim-lspconfig",
 		config = function()
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<C-m>", vim.lsp.buf.signature_help, {})
-			vim.keymap.set("n", "E", vim.diagnostic.open_float, {})
+			nmap("gd", vim.lsp.buf.definition)
+			nmap("gD", vim.lsp.buf.declaration)
+			nmap("gr", vim.lsp.buf.references)
+			nmap("gi", vim.lsp.buf.implementation)
+			nmap("K", vim.lsp.buf.hover)
+			nmap("<C-m>", vim.lsp.buf.signature_help)
+			nmap("E", vim.diagnostic.open_float)
 
 			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
