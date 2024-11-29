@@ -10,7 +10,7 @@ imap("jj", "<Esc>")
 nmap("<space>", "/")
 nmap("<C-space>", "?")
 
-nmap("<leader>cr", ":noh<cr>")
+nmap("<leader><cr>", ":noh<cr>")
 
 vim.opt.expandtab = true
 vim.opt.smarttab = true
@@ -28,6 +28,8 @@ nmap("<C-h>", "<C-W>h")
 nmap("<C-l>", "<C-W>l")
 
 vim.cmd([[
+    set background=dark
+
     au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
     au Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
