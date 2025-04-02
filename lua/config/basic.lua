@@ -28,7 +28,7 @@ nmap("<C-h>", "<C-W>h")
 nmap("<C-l>", "<C-W>l")
 
 vim.cmd([[
-    set background=light
+    set background=dark
 
     au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 

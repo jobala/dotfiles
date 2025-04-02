@@ -55,6 +55,19 @@ return {
         capabilities = capabilities,
       })
       lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+      lspconfig.pylsp.setup({
+        capabilities = capabilities,
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = {
+                ignore = { "W391" },
+                maxLineLength = 100,
+              },
+            },
+          },
+        },
+      })
     end,
   },
 }

@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local smart_splits = wezterm.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 local config = wezterm.config_builder()
 
-config.font = wezterm.font("Iosevka NFM")
+config.font = wezterm.font("Iosevka NF")
 config.font_size = 16
 
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
