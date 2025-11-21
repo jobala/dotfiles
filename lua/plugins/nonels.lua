@@ -10,17 +10,19 @@ return {
 			sources = {
 				null.builtins.formatting.stylua,
 				null.builtins.formatting.prettierd,
-				null.builtins.diagnostics.golangci_lint,
 				null.builtins.formatting.goimports,
+				null.builtins.formatting.mix,
+				null.builtins.diagnostics.credo,
+				null.builtins.diagnostics.golangci_lint,
 			},
 		})
-
+		vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 		vim.api.nvim_create_autocmd("BufWritePre", {
+			group = augroup,
+			buffer = bufnr,
 			callback = function()
-				vim.lsp.buf.format()
+				vim.lsp.buf.format({ async = false })
 			end,
-
-			group = vim.api.nvim_create_augroup("lsp_document_format", { clear = true }),
 		})
 	end,
 }

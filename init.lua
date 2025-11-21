@@ -9,6 +9,7 @@ for _, f in pairs(vim.api.nvim_get_runtime_file("lsp/*.lua", true)) do
 end
 
 vim.lsp.enable(lsp_configs)
+vim.opt.clipboard = "unnamedplus"
 
 nmap("gd", vim.lsp.buf.definition)
 nmap("gD", vim.lsp.buf.declaration)

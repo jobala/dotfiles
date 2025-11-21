@@ -1,5 +1,5 @@
 return {
-	cmd = { "rust-analyzer" },  -- Note: should be "rust-analyzer" with hyphen
+	cmd = { "rust-analyzer" }, -- Note: should be "rust-analyzer" with hyphen
 	filetypes = { "rust" },
 	settings = {
 		["rust-analyzer"] = {
@@ -14,6 +14,7 @@ return {
 			},
 		},
 	},
+
 	on_attach = function(client, bufnr)
 		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 	end,
