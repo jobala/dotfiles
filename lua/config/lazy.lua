@@ -20,6 +20,10 @@ require("lazy").setup({
 		{ import = "plugins" },
 		-- { import = "lazyvim.plugins.extras.lang.typescript" },
 	},
+	checker = {
+		enabled = true, -- check for plugin updates periodically
+		notify = true, -- notify on update
+	},
 	install = {
 		colorscheme = { "edge" },
 	},

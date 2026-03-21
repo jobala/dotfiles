@@ -29,7 +29,7 @@ nmap("<C-l>", "<C-W>l")
 
 vim.cmd([[
     set background=dark
-
+    set t_Co=0
     au BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
     au Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
