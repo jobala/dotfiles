@@ -6,6 +6,7 @@ return {
 		vim.cmd.colorscheme("edge")
 	end,
 }
+
 -- return {
 --     "panozzaj/print_wb",
 --
