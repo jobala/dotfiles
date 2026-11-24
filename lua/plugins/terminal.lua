@@ -1,15 +1,18 @@
 return {
-	"akinsho/toggleterm.nvim",
+    "akinsho/toggleterm.nvim",
 
-	config = function()
-		vim.cmd([[
+    config = function()
+        vim.cmd([[
             autocmd TermEnter term://*toggleterm#*
                   \ tnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 
             nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
             inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
+            tnoremap <Esc> <C-\><C-n>
+            tnoremap <C-v><Esc> <Esc>
+            tnoremap("jj", "<Esc>")
         ]])
 
-		require("toggleterm").setup({})
-	end,
+        require("toggleterm").setup({})
+    end,
 }

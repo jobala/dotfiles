@@ -1,4 +1,5 @@
 require("config/basic")
+vim.cmd.colorscheme("fleet-night")
 require("config/lazy")
 
 local lsp_configs = {}
@@ -47,3 +48,17 @@ vim.diagnostic.config({
 		},
 	},
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	callback = function(args)
+		pcall(vim.treesitter.start, args.buf)
+	end,
+})
+
+-- Resize vertically (width)
+vim.keymap.set("n", "<C-w>>", "<cmd>vertical resize +5<CR>")
+vim.keymap.set("n", "<C-w><", "<cmd>vertical resize -5<CR>")
+
+-- Resize horizontally (height)
+vim.keymap.set("n", "<C-w>+", "<cmd>horizontal resize +5<CR>")
+vim.keymap.set("n", "<C-w>-", "<cmd>horizontal resize -5<CR>")
